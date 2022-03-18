@@ -34,7 +34,7 @@ ODD = "odd"
 EVEN = "even"
 PRIME = "prime"
 
-def filter_numbers(*number,arg):
+def filter_numbers(numbers, arg):
     """
     функция, которая на вход принимает список из целых чисел,
     и возвращает только чётные/нечётные/простые числа
@@ -46,9 +46,9 @@ def filter_numbers(*number,arg):
     <<< [2, 4]
     """
     if arg == PRIME:
-        return list(filter(is_prime, number))
+        return list(filter(is_prime, numbers))
     else:
         ost = 0
         if arg == ODD:
             ost = 1
-        return list(filter(lambda x: x % 2 == ost, number))
+        return list(filter(lambda x: x % 2 == ost, numbers))
